@@ -1,9 +1,10 @@
-# Your Name Here
+# Daniel Keuning
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section:
+# 11/12/2024
+# Lab 09
+# Lab Section: 11
 # Sources, people worked with, help given to:
+#   - Worked with Braeden Kirby
 #   - Entered prompt into ChatGPT to figure out how to do the "*toppings" thing.
 #   - Entered error codes into ChatGPT to figure out where I was going wrong
 #          - I gave it a TypeError and an AttributeError; it pointed out a couple typos I had in my code
@@ -41,7 +42,7 @@ class Pizza:
     def __init__(self, sauce, size, toppings):
         self.setSize(size)
         self.sauce = sauce
-        self.toppings = ["cheese"]
+        self.toppings = []
 
     def getSize(self):
         return self.size
@@ -198,11 +199,7 @@ pizzaria = Pizzaria()
 while True:
     order = input("Hit enter to order a pizza, or type 'exit' to exit. ").strip().lower()
     if order == "exit":
-        print("Order Cancelled.")
+        print("Order Exited.")
         break
     pizzaria.placeOrder()
     pizzaria.getReceipt()
-
-    print(f"Total Orders Placed: {pizzaria.getNumberOfOrders()}")
-
-
